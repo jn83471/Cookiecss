@@ -1,0 +1,9 @@
+blockquote{
+    font-weight: bold;
+}
+.blockquote-footer{
+    font-size: .9rem;
+}
+.blockquote-footer::before{
+    content: "-";
+}

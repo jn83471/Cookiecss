@@ -1,0 +1,2 @@
+z-index
+$img-hidden=50;

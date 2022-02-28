@@ -1,0 +1,296 @@
+
+*{
+    margin: 0px;
+}
+body{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+.row-reverse{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+.container{
+    margin: 0px;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+.container-responsive{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.col{
+    flex: 1 0 0%;
+    box-sizing: border-box;
+    height: auto;
+}
+.skip-col-0{
+    margin-left: 0px;
+}
+img{
+    max-width: 100%;
+}
+@for $gasp from 0 to 6 {
+    .g-gap-#{$gasp}{
+        gap: #{$gasp/4}rem;
+    }
+}
+@for $i from 1 through 12 {
+    .skip-col-#{$i} {
+        margin-left: 100%/(12/$i);
+    }
+}
+
+@for $i from 1 through 7 {
+    .order-#{$i} {
+        order: $i;
+    }
+}
+
+@each $title,$element in $align {
+    .align-#{$title}{
+        align-items: $element !important;
+    }
+    .align-self-#{$title}{
+        align-self: $element !important;
+    }
+}
+@each $title,$element in $justify-flex {
+    .justify-#{$title}{
+        justify-content: $element !important;
+    }
+    .justify-self-#{$title}{
+        justify-self: $element !important;
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: 100%/(12/$i);
+        box-sizing: border-box;
+        position: relative;
+    }
+}
+@each $i in $displays {
+    .d-#{$i} {
+        display: $i !important;
+    }
+}
+@media (max-width:460px){
+    @for $i from 1 through 12 {
+        .col-s-#{$i} {
+            width: 100%/(12/$i);
+        }
+    }
+    @each $i in $displays {
+        .d-s-#{$i} {
+            display: $i !important;
+        }
+    }
+    @each $title,$element in $align {
+        .align-s-#{$title}{
+            align-items: $element !important;
+        }
+        .align-self-s-#{$title}{
+            align-self: $element !important;
+        }
+    }
+    @each $title,$element in $justify-flex {
+        .justify-s-#{$title}{
+            justify-content: $element !important;
+        }
+        .justify-self-s-#{$title}{
+            justify-self: $element !important;
+        }
+    }
+    .skip-col-s-0{
+        margin-left: 0px;
+    }
+    @for $i from 1 through 12 {
+        .skip-col-s-#{$i} {
+            margin-left: 100%/(12/$i);
+        }
+    }
+
+    @for $i from 1 through 7 {
+        .order-s-#{$i} {
+            order: $i;
+        }
+    }
+}
+@media (min-width:461px) and (max-width:768px){
+    @for $i from 1 through 12 {
+        .col-m-#{$i} {
+            width: 100%/(12/$i);
+        }
+    }
+    @each $i in $displays {
+        .d-m-#{$i} {
+            display: $i !important;
+        }
+    }
+    @each $title,$element in $align {
+        .align-m-#{$title}{
+            align-items: $element !important;
+        }
+        .align-self-m-#{$title}{
+            align-self: $element !important;
+        }
+    }
+    .skip-col-m-0{
+        margin-left: 0px;
+    }
+    @each $title,$element in $justify-flex {
+        .justify-m-#{$title}{
+            justify-content: $element !important;
+        }
+        .justify-self-m-#{$title}{
+            justify-self: $element !important;
+        }
+    }
+    @for $i from 1 through 12 {
+        .skip-col-m-#{$i} {
+            margin-left: 100%/(12/$i);
+        }
+    }
+    @for $i from 1 through 7 {
+        .order-m-#{$i} {
+            order: $i;
+        }
+    }
+}
+@media (min-width:769px) and (max-width:998px){
+    @for $i from 1 through 12 {
+        .col-t-#{$i} {
+            width: 100%/(12/$i);
+        }
+    }
+    @each $i in $displays {
+        .d-t-#{$i} {
+            display: $i !important;
+        }
+    }
+    @each $title,$element in $align {
+        .align-t-#{$title}{
+            align-items: $element !important;
+        }
+        .align-self-t-#{$title}{
+            align-self: $element !important;
+        }
+    }
+    @each $title,$element in $justify-flex {
+        .justify-t-#{$title}{
+            justify-content: $element !important;
+        }
+        .justify-self-t-#{$title}{
+            justify-self: $element !important;
+        }
+    }
+    .skip-col-t-0{
+        margin-left: 0px;
+    }
+    @for $i from 1 through 12 {
+        .skip-col-t-#{$i} {
+            margin-left: 100%/(12/$i);
+        }
+    }
+    @for $i from 1 through 7 {
+        .order-t-#{$i} {
+            order: $i;
+        }
+    }
+}
+@media (min-width:998px) and (max-width:1200px){
+    @for $i from 1 through 12 {
+        .col-d-#{$i} {
+            width: 100%/(12/$i);
+            
+        }
+    }
+    @each $i in $displays {
+        .d-d-#{$i} {
+            display: $i !important;
+        }
+    }
+    @each $title,$element in $align {
+        .align-d-#{$title}{
+            align-items: $element !important;
+        }
+        .align-self-d-#{$title}{
+            align-self: $element !important;
+        }
+    }
+    @each $title,$element in $justify-flex {
+        .justify-d-#{$title}{
+            justify-content: $element !important;
+        }
+        .justify-self-d-#{$title}{
+            justify-self: $element !important;
+        }
+    }
+    .skip-col-d-0{
+        margin-left: 0px;
+    }
+    @for $i from 1 through 12 {
+        .skip-col-d-#{$i} {
+            margin-left: 100%/(12/$i);
+        }
+    }
+    @for $i from 1 through 7 {
+        .order-d-#{$i} {
+            order: $i;
+        }
+    }
+}
+@media (min-width:1200px){
+    @for $i from 1 through 12 {
+        .col-b-#{$i} {
+            width: 100%/(12/$i);
+        }
+    }
+    @each $i in $displays {
+        .d-b-#{$i} {
+            display: $i !important;
+        }
+    }
+    @each $title,$element in $align {
+        .align-b-#{$title}{
+            align-items: $element !important;
+        }
+        .align-self-b-#{$title}{
+            align-self: $element !important;
+        }
+    }
+    @each $title,$element in $justify-flex {
+        .justify-b-#{$title}{
+            justify-content: $element !important;
+        }
+        .justify-self-b-#{$title}{
+            justify-self: $element !important;
+        }
+    }
+    .skip-col-b-0{
+        margin-left: 0px;
+    }
+    @for $i from 1 through 12 {
+        .skip-col-b-#{$i} {
+            margin-left: 100%/(12/$i);
+        }
+    }
+    @for $i from 1 through 7 {
+        .order-b-#{$i} {
+            order: $i;
+        }
+    }
+}

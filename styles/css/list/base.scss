@@ -1,0 +1,9 @@
+@each $list in $styles {
+    .list-#{$list}{
+        list-style: $list;
+    }
+}
+.list-inline *{
+    display: inline-block;
+    padding: .25rem;
+}

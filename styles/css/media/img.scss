@@ -1,0 +1,98 @@
+.img-thumblair{
+    padding: 2px;
+    border-radius: .2rem;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    background-color: rgb(251, 251, 251);
+}
+$float:('start':left,'end':right,"none":none);
+@each $key,$direction in $float {
+    .float-#{$key}{
+        float: $direction;
+        clear: $direction;
+    }
+}
+.mx-auto{
+    margin: auto !important;
+}
+.clear-fix::after{
+    content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+$radius:("none":0,"1":.5rem,"2":1rem,"3":1.5rem,"4":2rem,"5":2.5rem,"circle":50%);
+@each $key,$size in $radius {
+    .border-radius-#{$key}{
+        border-radius: $size !important;
+    }
+}
+@media (max-width:460px) {
+    @each $key,$direction in $float {
+        .float-s-#{$key}{
+            float: $direction;
+            clear: $direction;
+        }
+    }
+    @each $key,$size in $radius {
+        .border-radius-s-#{$key}{
+            border-radius: $size !important;
+        }
+    }
+}
+
+@media (min-width:461px) and (max-width:768px) {
+    @each $key,$direction in $float {
+        .float-m-#{$key}{
+            float: $direction;
+            clear: $direction;
+        }
+    }
+    @each $key,$size in $radius {
+        .border-radius-m-#{$key}{
+            border-radius: $size !important;
+        }
+    }
+}
+
+@media (min-width:769px) and (max-width:998px) {
+    @each $key,$direction in $float {
+        .float-t-#{$key}{
+            float: $direction;
+            clear: $direction;
+        }
+    }
+    @each $key,$size in $radius {
+        .border-radius-t-#{$key}{
+            border-radius: $size !important;
+        }
+    }
+}
+
+@media (min-width:998px) and (max-width:1200px) {
+    @each $key,$direction in $float {
+        .float-d-#{$key}{
+            float: $direction;
+            clear: $direction;
+        }
+    }
+    @each $key,$size in $radius {
+        .border-radius-d-#{$key}{
+            border-radius: $size !important;
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    @each $key,$direction in $float {
+        .float-b-#{$key}{
+            float: $direction;
+            clear: $direction;
+        }
+    }
+    @each $key,$size in $radius {
+        .border-radius-b-#{$key}{
+            border-radius: $size !important;
+        }
+    }
+}

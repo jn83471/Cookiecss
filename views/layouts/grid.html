@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../app.css">
+    <title>Grid</title>
+</head>
+<body>
+    <main class="container">
+        <div class="row">
+            <div class="col-6">
+                c
+            </div>
+            <div class="col-5">
+                b
+            </div>
+            <div class="col-1">
+                a
+            </div>
+        </div>
+        <div class="row">
+            <div style="background-color: blueviolet;" class="col-6 col-s-12 col-m-6 col-t-1 col-d-11 col-b-12">
+                c
+            </div>
+            <div style="background-color: aqua;" class="col-5 col-s-10 col-m-6 col-t-11 col-d-1 col-b-12">
+                b
+            </div>
+            <div style="background-color: aquamarine;" class="col-1 col-s-2 col-m-12 col-t-12 col-d-12 col-b-12">
+                a
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                c
+            </div>
+            <div class="col">
+                b
+            </div>
+            <div class="col">
+                a
+            </div>
+        </div>
+    </main>
+    <aside class="container-responsive">
+        <div class="row">
+            <div style="background-color: blueviolet;" class="col-6 col-s-12 col-m-6 col-t-1 col-d-11 col-b-12">
+                c
+            </div>
+            <div style="background-color: aqua;" class="col-5 d-s-none col-m-6 col-t-11 col-d-1 col-b-12">
+                b
+            </div>
+            <div style="background-color: aquamarine;" class="col-1 d-s-none col-m-12 col-t-12 col-d-12 col-b-12">
+                a
+            </div>
+        </div>
+    </aside>
+
+    <aside class="container-responsive mt-3" style="background-color:  burlywood;">
+        <div class="row align-end align-s-start align-m-center" style="height: 300px;">
+            <div style="background-color: blueviolet;" class="col">
+                c
+            </div>
+            <div style="background-color: aqua;" class="col">
+                b
+            </div>
+            <div style="background-color: aquamarine;" class="col">
+                a
+            </div>
+        </div>
+    </aside>
+    <aside class="container-responsive mt-3" style="background-color:  burlywood;">
+        <div class="row" style="height: 300px;">
+            <div style="background-color: blueviolet;" class="col align-self-start align-self-s-end">
+                c
+            </div>
+            <div style="background-color: aqua;" class="col align-self-center align-self-s-center">
+                b
+            </div>
+            <div style="background-color: aquamarine;" class="col align-self-end align-self-s-start">
+                a
+            </div>
+        </div>
+    </aside>
+    <div class="row mt-4">
+        <div style="background-color: blueviolet;" class="col-6 skip-col-6 col-s-2 skip-col-s-5">
+            c
+        </div>
+        <div style="background-color: aqua;" class="col-5 skip-col-3 skip-col-s-0 col-s-12">
+            b
+        </div>
+        <div style="background-color: aquamarine;" class="col-2 skip-col-5 col-s-11 skip-col-s-1">
+            a
+        </div>
+    </div>
+
+    <div class="row-reverse mt-4 justify-around justify-s-between justify-m-right justify-t-evenly justify-d-left">
+        <div style="background-color: blueviolet;" class="col-2">
+            c
+        </div>
+        <div style="background-color: aqua;" class="col-3">
+            b
+        </div>
+        <div style="background-color: aquamarine;" class="col-3">
+            a
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div style="background-color: blueviolet;" class="col order-3 order-s-1">
+            last column
+        </div>
+        <div style="background-color: aqua;" class="col order-2">
+            middle column
+        </div>
+        <div style="background-color: aquamarine;" class="col order-1">
+            first column
+        </div>
+    </div>
+    <!--
+        s small 460
+        m movil 600 and small tablet to 768
+        t tablet size to 998w
+        d desktop to 1200
+        b big dispositives to infinite
+    -->
+</body>
+</html>

@@ -1,0 +1,10 @@
+@each $align in $text-align{
+    .text-#{$align}{
+        text-align: $align;
+    }
+}
+@each $decorations in $text-decorations{
+    .text-#{$decorations}{
+        text-decoration: $decorations;
+    }
+}

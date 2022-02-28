@@ -1,0 +1,34 @@
+@use "sass:map";
+@use "sass:color";
+@use "sass:string";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+//text-align
+$text-align:left,right,center;
+$text-decorations:none,underline,overline,line-through,blink;
+
+//grid
+$align:("end":flex-end,"start":flex-start,"center":center);
+$justify-flex:("base":baseline,"left":left,"end":end,"right":right,"between":space-between,"evenly":space-evenly,"around":space-around,"center":center);
+$displays:none,block,inline,inline-block,flex,grid;
+
+$titleFonts: Helvetica,Arial, sans-serif;
+$principalFont:'Montserrat', sans-serif;
+$quote:Calibri,'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+
+//transitions
+$time-btn-hover:.3s;
+
+//liststyles
+$styles:none,circle,disc,square;
+
+//borders
+$colors:("primary":#d63384,"danger":#dc3545,"dark":#333333,"light":rgb(2511,251,251),"success":#146c43,"gray":#a1a1a1,"info":#0dcaf0,"warning":#FFC107);
+$positions:top,bottom,right,left;
+
+@import  'styles/css/base/typhography.scss','styles/css/base/blockquote.scss','styles/css/base/gridSystem.scss',
+'styles/css/base/paddings.scss','styles/css/base/borders.scss',
+'styles/css/positions/align.scss',
+'styles/css/list/base.scss',
+'styles/css/media/img.scss','styles/css/media/imgcite.scss','styles/css/media/reveal.scss'

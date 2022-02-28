@@ -1,0 +1,39 @@
+.img-reveal{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+.img-reveal.not-hidden:hover{
+    overflow: visible;
+}
+.img-reveal.not-hidden:hover .img-hidden{
+    z-index: 50;
+}
+.img-reveal img{
+    display: block;
+}
+.img-hidden{
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    left: 0;
+    opacity: 1;
+    transition: opacity .4s ease-in-out,transform .4s ease-in-out;
+    pointer-events: none;
+}
+.img-reveal:not(.move-up,.move-down,.move-right,.move-left):hover .img-hidden{
+    opacity: 0;
+}
+.img-reveal.move-up:hover:hover .img-hidden{
+    transform: translateY(-100%);
+}
+.img-reveal.move-down:hover:hover .img-hidden{
+    transform: translateY(100%);
+}
+
+.img-reveal.move-right:hover:hover .img-hidden{
+    transform: translateX(-100%);
+}
+.img-reveal.move-left:hover:hover .img-hidden{
+    transform: translateX(100%);
+}

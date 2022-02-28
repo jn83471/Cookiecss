@@ -1,0 +1,65 @@
+
+.no-copy *::selection{
+    background-color: transparent;
+}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+    font-family: $titleFonts;
+    display: block;
+    font-weight: bold;
+}
+h1,.h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+h2,.h2{
+    font-size: 3.5rem;
+}
+h3,.h3{
+    font-size: 3rem;
+}
+h4,.h4{
+    font-size: 2.5rem;
+}
+h5,.h5{
+    font-size: 2rem;
+}
+h6,.h6{
+    font-size: 1.5rem;
+}
+p,span,figcaption,code,pre,div,section,footer,header,main,aside,label,.btn,a,li,div,samp{
+    font-family: $principalFont;
+}
+p,code,pre,label,section,footer,header,main,aside,label,.btn,a,li,div,samp{
+    font-size: 1rem;
+}
+sup{
+    font-size: 1.2rem;
+}
+small,sub{
+    font-family: $quote;
+    font-size: .8rem;
+}
+small,label{
+    color: rgb(129, 127, 127);
+}
+th{
+    font-weight: bold;
+}
+strong{
+    font-weight: bold;
+}
+video{
+    max-width: 100% !important;
+}
+dt{
+    font-weight: 900;
+}
+
+.traslate-middle{
+    transform: translate(-50%,-50%)!important;
+}
+.text-truncate{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

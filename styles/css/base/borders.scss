@@ -1,0 +1,64 @@
+
+.border{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #333333;
+}
+@each $key,$value in $colors {
+    .border-#{$key}{
+        border-color: $value !important;
+    }
+}
+@each $position in $positions {
+    .border-#{$position}{
+        border-#{$position}-color: #333333;
+        border-#{$position}-style: solid;
+        border-#{$position}-width: 1px;
+    }
+}
+
+
+@media (max-width:460px) {
+
+    @each $key,$value in $colors {
+        .border-s-#{$key}{
+            border-color: $value !important;
+        }
+    }
+}
+
+@media (min-width:461px) and (max-width:768px) {
+
+    @each $key,$value in $colors {
+        .border-m-#{$key}{
+            border-color: $value !important;
+        }
+    }
+}
+
+@media (min-width:769px) and (max-width:998px) {
+
+    @each $key,$value in $colors {
+        .border-t-#{$key}{
+            border-color: $value !important;
+        }
+    }
+}
+
+@media (min-width:998px) and (max-width:1200px) {
+
+    @each $key,$value in $colors {
+        .border-d-#{$key}{
+            border-color: $value !important;
+        }
+    }
+}
+
+@media (min-width:1200px) {
+
+    @each $key,$value in $colors {
+        .border-b-#{$key}{
+            border-color: $value !important;
+        }
+    }
+}
